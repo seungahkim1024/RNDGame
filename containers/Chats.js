@@ -1,5 +1,5 @@
 import { View, Text } from "react-native";
-import styles from "@styles";
+import styles from "@styles/Chats";
 import ChatList from '@components/chats/ChatList'
 
 const Chats = () => {
@@ -26,7 +26,7 @@ const Chats = () => {
     }
   ]
   return (
-    <View style={styles.chatsContainer}>
+    <View style={styles.Container}>
       <Text>
         <ChatList data={chatData} />
       </Text>
