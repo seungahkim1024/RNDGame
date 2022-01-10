@@ -1,10 +1,10 @@
 import { View, Text } from "react-native";
-import styles from "@styles";
+import styles from "@styles/Dices";
 
 const Dices = () => {
   // test!!!
   return (
-    <View style={styles.dicesContainer}>
+    <View style={styles.Container}>
       <Text>Dices 영역</Text>
     </View>
   );
