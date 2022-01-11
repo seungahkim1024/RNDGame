@@ -9,7 +9,7 @@ import { useParams } from 'react-router-dom';
 
 // upstream test
 function DiceGame () { 
-
+  //TEST
   // url에 파라미터가 있을 때 사용 가능
   const { userId, roomId } = useParams();
 
