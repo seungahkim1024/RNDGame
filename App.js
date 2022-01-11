@@ -1,21 +1,20 @@
-import { StatusBar } from "expo-status-bar";
-import { ScrollView, View } from "react-native";
-import styles from "@styles";
-import PlayersContainer from "@containers/Players";
-import ChatsContainer from "@containers/Chats";
-import DicesContainer from "@containers/Dices";
-import ResultsContainer from "@containers/Results";
+import DiceGame from './pages/DiceGame'
+import { Text } from "react-native";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+const Welcome = () => {
+  return (<Text>Welcome</Text>)
+}
 
 export default function App() {
   return (
-    <View style={styles.wrapperContainer}>
-      <StatusBar style="auto" />
-      <ScrollView>
-        <PlayersContainer />
-        <ChatsContainer />
-        <DicesContainer />
-        <ResultsContainer />
-      </ScrollView>
-    </View>
+    //라우터 기능 추가
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Welcome />}/>
+        <Route path="/diceGame" element={<DiceGame />}/>
+        <Route path="/diceGame/:userId/:roomId" element={<DiceGame />}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
